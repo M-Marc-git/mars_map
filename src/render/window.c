@@ -6,9 +6,19 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "event/input.h"
+
 void glfw_error_callback(int code, const char* info) {
     fprintf(stderr, "Erreur(%d): %s\n", code, info);
     exit(EXIT_FAILURE);
+}
+
+void glfw_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    if(action == GLFW_PRESS) {
+        set_key(key, 1);
+    } else if(action == GLFW_RELEASE) {
+        set_key(key, 0);
+    }
 }
 
 Window create_window(int width, int height, const char* title) {
@@ -41,6 +51,7 @@ Window create_window(int width, int height, const char* title) {
     glClearColor(0.f, 0.f, 0.f, 1.f);
 
     // GLFW
+    glfwSetKeyCallback(window.handle, glfw_key_callback);
 
     return window;
 }

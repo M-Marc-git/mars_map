@@ -107,6 +107,7 @@ Matrix4f look_at_matrix(const Vector3f eye, const Vector3f center, const Vector3
     const Vector3f u = cross_product(s, f);
 
     Matrix4f matrix = IDENTITY;
+
     matrix.m11 = s.x;
     matrix.m21 = s.y;
     matrix.m31 = s.z;
