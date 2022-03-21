@@ -1,3 +1,11 @@
 # Binaires
 bin/
 bin-int/
+
+# Makefiles
+Makefile
+makefile
+*.mk
+
+# Documentation
+doc/

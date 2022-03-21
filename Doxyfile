@@ -1,0 +1,7 @@
+PROJECT_NAME           = "Mars Map"
+PROJECT_NUMBER         = "0.0.1"
+PROJECT_BRIEF          = "Projection tri-dimentionnelle d'une carte de Mars"
+OUTPUT_DIRECTORY       = doc/
+OUTPUT_LANGUAGE        = French
+INPUT                  = src
+RECURSIVE              = YES
