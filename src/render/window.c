@@ -14,10 +14,21 @@ void glfw_error_callback(int code, const char* info) {
 }
 
 void glfw_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    static unsigned int draw_mode = GL_FILL;
     if(action == GLFW_PRESS) {
         set_key(key, 1);
     } else if(action == GLFW_RELEASE) {
         set_key(key, 0);
+
+        if(key == GLFW_KEY_Q) {
+            if(draw_mode == GL_FILL) {
+                draw_mode = GL_LINE;
+            } else {
+                draw_mode = GL_FILL;
+            }
+
+            glPolygonMode(GL_FRONT_AND_BACK, draw_mode);
+        }
     }
 }
 

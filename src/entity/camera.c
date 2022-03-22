@@ -40,6 +40,12 @@ void update_camera(Camera* camera) {
     if(get_key(GLFW_KEY_D)) {
         camera->position = add_vector3f(camera->position, camera->right);
     }
+    if(get_key(GLFW_KEY_SPACE)) {
+        camera->position = add_vector3f(camera->position, (Vector3f){0.f, 1.f, 0.f});
+    }
+    if(get_key(GLFW_KEY_LEFT_SHIFT)) {
+        camera->position = sub_vector3f(camera->position, (Vector3f){0.f, 1.f, 0.f});
+    }
 }
 
 Matrix4f get_camera_view_matrix(const Camera* camera) {

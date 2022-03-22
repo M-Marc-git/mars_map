@@ -9,3 +9,9 @@ makefile
 
 # Documentation
 doc/
+
+# Image monde
+assets/world/*.jpg
+
+# Configuration
+.vscode/
