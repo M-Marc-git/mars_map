@@ -6,6 +6,7 @@
 #define WORLD_CHUNK
 
 #define CHUNK_SIZE 64
+#define AMPLITUDE 20.f
 
 #include "render/array.h"
 #include "render/buffer.h"
