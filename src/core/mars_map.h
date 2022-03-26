@@ -18,6 +18,8 @@ typedef struct MarsMap {
         Shader shader;
         unsigned int view_location;
         unsigned int projection_location;
+        unsigned int light_position_location;
+        unsigned int light_color_position;
     } world_shader;
 
     Camera camera;

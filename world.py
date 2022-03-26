@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import logging
 import threading
+from typing import ParamSpecArgs
 from PIL import Image
 
 format = "%(asctime)s: %(message)s"
@@ -9,6 +10,9 @@ logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
 THREAD_COUNT = 4
 TOP_LEFT_CORNER = [205, 385]
 DOWN_RIGHT_CORNER = [11723, 6782]
+
+MERIDIEN = [i for i in range(524, DOWN_RIGHT_CORNER[0], 320)]
+PARALLELE = [j for j in range(402, DOWN_RIGHT_CORNER[1], 767)]
 
 CHUNK_SIZE = 64
 
@@ -37,6 +41,13 @@ def make_image(i, j):
     for x in range(i, i+CHUNK_SIZE):
         for y in range(j, j+CHUNK_SIZE):
             pixels[x-i,y-j] = pix_map[x,y]
+            for meridien in MERIDIEN:
+                if(x == meridien):
+                    pixels[x-i,y-j] = (pix_map[x,y-1]+pix_map[x,y+1])/2
+                    continue
+            for parallele in PARALLELE:
+                if(y == PARALLELE):
+                    pixels[x-i,y-j] = (pix_map[x,y-1]+pix_map[x,y+1])/2
     
     image_name = "assets/world/world_" + str(int((i-TOP_LEFT_CORNER[0])/64)) + "_" + str(int((j-TOP_LEFT_CORNER[1])/64)) + ".jpg"
     img.save(image_name)

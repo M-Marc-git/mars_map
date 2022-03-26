@@ -10,7 +10,7 @@ Projection tri-dimentionnelle d'une carte de mars réalisée d'après les donné
 ## Compilation et execution
 ***
  - installer les bibliothèques GLFW et GLEW sur votre système
- - télécharger premake5 pour votre système (https://premake.github.io/download/)
+ - télécharger premake5 pour votre système (https://premake.github.io/download/) (pour window et linux le fichier se trouve dans build)
  - lancer premake5 pour votre plateforme
  - executer world.py (generation des tronçons a partir de la carte globale (mola_mercat.jpg))
  - compiler et executer dans le repertoire de base
@@ -19,3 +19,8 @@ Projection tri-dimentionnelle d'une carte de mars réalisée d'après les donné
 ***
  - Déplacement: Z (avancer), Q (gauche), S (reculer), D (droite)
  - Filliforme/Remplis: A
+
+## Rendu
+***
+![Alt text](images/mars_1.png?raw=true "Mars 1")
+![Alt text](images/mars_2.png?raw=true "Mars_2")

@@ -12,7 +12,7 @@ float get_height(unsigned char* height, int x, int z) {
     if(x < 0 || z < 0 || x == CHUNK_SIZE || z == CHUNK_SIZE || height == NULL) {
         return 0;
     }
-    int begin = 3*z*CHUNK_SIZE+x;
+    int begin = 3*(z*CHUNK_SIZE+x);
 
     int final_height = 0;
     final_height = height[begin] << 16 |
