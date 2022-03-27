@@ -1,5 +1,5 @@
 # MarsMap
-Projection tri-dimentionnelle d'une carte de mars réalisée d'après les données du Mars Orbiter Laser Altimeter de la NASA.
+Projection tri-dimentionnelle d'une carte de Mars réalisée d'après les données du Mars Orbiter Laser Altimeter de la NASA.
 
 ## Dépendances
 ***
@@ -9,11 +9,12 @@ Projection tri-dimentionnelle d'une carte de mars réalisée d'après les donné
 
 ## Compilation et execution
 ***
+ - télécharger les sources avec git clone https://gitlab.com/Marc__M/marsmap.git --recursive
  - installer les bibliothèques GLFW et GLEW sur votre système
  - télécharger premake5 pour votre système (https://premake.github.io/download/) (pour window et linux le fichier se trouve dans build)
  - lancer premake5 pour votre plateforme
- - executer world.py (generation des tronçons a partir de la carte globale (mola_mercat.jpg))
- - compiler et executer dans le repertoire de base
+ - exécuter world.py (génération des tronçons à partir de la carte globale (mola_mercat.jpg))
+ - compiler et exécuter dans le répertoire de base
 
 ## Controles
 ***
