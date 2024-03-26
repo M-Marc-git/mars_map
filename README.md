@@ -11,8 +11,7 @@ Projection tri-dimentionnelle d'une carte de Mars réalisée d'après les donné
 ***
  - télécharger les sources avec git clone https://gitlab.com/Marc__M/marsmap.git --recursive
  - installer les bibliothèques GLFW et GLEW sur votre système
- - télécharger premake5 pour votre système (https://premake.github.io/download/) (pour window et linux le fichier se trouve dans build)
- - lancer premake5 pour votre plateforme
+ - lancer meson pour votre plateforme
  - exécuter world.py (génération des tronçons à partir de la carte globale (mola_mercat.jpg))
  - compiler et exécuter dans le répertoire de base
 
@@ -25,3 +24,4 @@ Projection tri-dimentionnelle d'une carte de Mars réalisée d'après les donné
 ***
 ![Alt text](images/mars_1.png?raw=true "Mars 1")
 ![Alt text](images/mars_2.png?raw=true "Mars_2")
+
