@@ -5,6 +5,7 @@ mkShell {
 	buildInputs = [
 		pkg-config
 		meson
+		python3Packages.pillow
 	];
 
 	nativeBuildInputs = [
